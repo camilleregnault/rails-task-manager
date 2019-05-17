@@ -1,0 +1,25 @@
+<h1>Add a task</h1>
+
+<!-- <form action="/tasks" method="post">
+
+  <label for="your_task">Your task</label>
+  <input type="text" name="task[title]" placeholder="Task" id="title">
+  <label for="details">Details</label>
+  <input type="text" name='task[details]' placeholder="Details" id="details">
+  <input type="submit">
+</form> -->
+
+<%= form_for(@task) do |f| %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :details %>
+  <%= f.text_field :details %>
+
+  <%= f.submit %>
+
+<% end  %>
+
+<br>
+
+<%= link_to "Back to list", tasks_path %>
